@@ -4,6 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+/*Colores
+Azul  Marino #073447
+Azul bajito #4DABCF
+Gris Claro #6B6B6B
+Gris Oscuro #292929*/
+
+
 @font-face {
      font-family: 'open_sansregular';
       src:url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype');
@@ -15,7 +22,8 @@ body {
 }
 /* start header */
 .header_bg{
-	background: #323232;
+	/*background: #323232;*/
+	background: #073447;
 }
 .h_logo{
 	display: none;

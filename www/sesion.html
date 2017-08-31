@@ -5,6 +5,11 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<style>
+	.form-control{
+		height: 40px !important;
+	}
+	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--[if lt IE 9]>
@@ -15,6 +20,21 @@
      <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
      <!-- start plugins -->
      <script type="text/javascript" src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+
+     	$("#sesion").hide();
+     	$("#pregunta").show();
+
+     	$(".correo").click(function(){
+     		$("#sesion").show();
+     		$("#pregunta").hide();
+
+    	 });
+     });
+     </script>
+     
      <script>
      $(function() {
      	var pull 		= $('#pull');
@@ -32,9 +52,6 @@
      	});
      });
      </script>
-<!----font-Awesome----->
-   	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-<!----font-Awesome----->
 </head>
 <body>
 	<div class="header_bg" id="home"><!-- start header -->
@@ -60,33 +77,31 @@
 
 	<div class="row">
 		<div class="col-md-2 col-xs-1"></div>
-		<!-- <div class="col-md-8 col-xs-10 contact_left text-center">
+		<div id="pregunta" class="col-md-8 col-xs-10 contact_left text-center">
 			<img src="images/logo-ae-small.png" class="img-responsive centrar-img" title="Logo Ayudando a emprender">
 			<h1 class="text-center">Ayudando a emprender</h1>
 
-			<form id="pregunta" method="post" action="#">
+			<form>
 				<input class="btn-sesion" type="submit" name="" value="Inicia sesión con Facebook">
 				<br>
 				<br>
-				<input class="btn-sesion" type="submit" name="" value="Inicia con correo electrónico">
+				<input class="btn-sesion correo" type="submit" name="" value="Inicia con correo electrónico">
 				<br>
 				<br>
 				<input class="btn-registro" type="submit" name="" value="Registro con correo electrónico">
 			</form>
 			<br>
 			<p>Con el proceso de registro confirmas estar de acuerdo con nuestros <a>términos y condiciones.</a></p>
-		</div> -->
+		</div>
 
-		<div class="col-md-8 col-xs-10 text-center">
+		<div id="sesion" class="col-md-8 col-xs-10 text-center">
 			<img src="images/logo-ae-small.png" class="img-responsive centrar-img" title="Logo Ayudando a emprender">
 			<h1 class="text-center">Ayudando a emprender</h1>
-
-			<form id="sesion" method="post" action="#">
+			<br>
+			<form>
 				<input class="form-control" type="text" placeholder="Usuario">
 				<br>
-				<br>
 				<input class="form-control" type="password" placeholder="Contraseña">
-				<br>
 				<br>
 				<input class="btn-registro" type="submit" name="" value="Iniciar Sesión">
 			</form>

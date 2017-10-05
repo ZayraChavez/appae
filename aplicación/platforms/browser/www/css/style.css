@@ -15,9 +15,6 @@ Gris Oscuro #292929*/
      font-family: 'plumpfull';
       src:url('../fonts/Plumpfull.ttf') format('truetype');
 }
-p{
-	 font-size: 16px;
-}
 body {
 
 
@@ -37,7 +34,7 @@ h6{
 	font-family: 'plumpfull';
 }
 h1{
-	font-size: 22px !important;
+	font-size: 20px !important;
 }
 
 

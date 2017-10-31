@@ -40,22 +40,7 @@
         });
         </script>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Inicio</a>
-                    @else
-                        <a href="{{ url('/login') }}">Inicio de sesión</a>
-                        <a href="{{ url('/register') }}">Registro</a>
-                    @endif
-                </div>
-            @endif
-        </div>
-
-
-
+    <body> 
 
         <div class="header_bg" id="home"><!-- start header -->
 <div class="container">
@@ -65,7 +50,15 @@
         </div> -->
         <nav class="top-nav">
             <ul class="top-nav nav_list">
-                <li><a href="sesion.html">Regístrate o inicia sesión</a></li>
+                @if (Route::has('login'))
+                @if (Auth::check())
+                    <li><a href="{{ url('/home') }}">Inicio</a></li>
+                @else
+                    <li><a href="{{ url('/login') }}">Inicio de sesión</a></li>
+                    <li><a href="{{ url('/register') }}">Registro</a></li>
+                @endif
+                @endif
+                <!-- <li><a href="sesion.html">Regístrate o inicia sesión</a></li> -->
                 <li class="page-scroll"><a href="index.html">Proyectos</a></li>
                 <li class="logo page-scroll"><a title="hexa" href="index.html">Ayudando a emprender</a></li>
                <!--  <li class="page-scroll"><a href="blog.html">blog</a></li>
